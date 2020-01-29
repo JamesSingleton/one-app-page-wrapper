@@ -1,0 +1,44 @@
+{
+  "name": "my-apartment-page-wrapper",
+  "version": "0.0.0",
+  "description": "Page wrapper module for my apartment",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build": "bundle-module",
+    "clean": "rimraf build",
+    "prepare": "npm run build",
+    "lint": "eslint --ignore-path .gitignore --ext js,jsx .",
+    "watch:build": "npm run build -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesSingleton/my-apartment-page-wrapper.git"
+  },
+  "keywords": [],
+  "author": "James Singleton <jamesrsingleton1@gmail.com> (https://github.com/JamesSingleton)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/JamesSingleton/my-apartment-page-wrapper/issues"
+  },
+  "homepage": "https://github.com/JamesSingleton/my-apartment-page-wrapper#readme",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "dependencies": {
+    "iguazu": "^3.0.0",
+    "iguazu-holocron": "^1.0.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0"
+  },
+  "devDependencies": {
+    "@americanexpress/one-app-bundler": "^6.1.1",
+    "babel-preset-amex": "^3.3.0",
+    "eslint": "^6.8.0",
+    "eslint-config-amex": "^11.1.0",
+    "husky": "^4.2.1",
+    "rimraf": "^3.0.1"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "config:base",
+    ":rebaseStalePrs",
+    ":automergeMinor",
+    ":label(ready)",
+    "group:linters",
+    ":assignee(JamesSingleton)",
+    ":separateMajorReleases",
+    ":enableVulnerabilityAlerts",
+    ":maintainLockFilesWeekly"
+  ],
+  "semanticCommitScope": "deps",
+  "stabilityDays": 1,
+  "prCreation": "not-pending",
+  "rangeStrategy": "replace",
+  "packageRules": [{
+    "packagePatterns": "^eslint",
+    "groupName": "eslint"
+  }]
+}
