@@ -118,9 +118,8 @@ Give a ⭐️ if this project helped you!
 
 Copyright © 2020 [James Singleton](https://github.com/JamesSingleton).
 
-This project is [Apache--2.0](https://github.com/JamesSingleton/one-app-page-wrapper/blob/master/LICENSE) licensed.
+This project is [Apache 2.0](https://github.com/JamesSingleton/one-app-page-wrapper/blob/master/LICENSE) licensed.
 
 ## 🗣️ Code of Conduct
 
-This project adheres to the [American Express Community Guidelines](https://github.com/JamesSingleton/one-app-page-wrapper/blob/master/CODE_OF_CONDUCT.md).
-By participating, you are expected to honor these guidelines.
+Please read [the full text](https://github.com/JamesSingleton/one-app-page-wrapper/blob/master/CODE_OF_CONDUCT.md) so that you can understand what actions will and will not be tolerated. By participating, you are expected to honor these guidelines.
