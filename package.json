@@ -1,7 +1,7 @@
 {
-  "name": "my-apartment-page-wrapper",
+  "name": "one-app-page-wrapper",
   "version": "0.0.0",
-  "description": "Page wrapper module for my apartment",
+  "description": "A page wrapper module to wrap your routes and pass a header and footer into.",
   "main": "index.js",
   "scripts": {
     "prebuild": "npm run clean",
@@ -13,15 +13,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JamesSingleton/my-apartment-page-wrapper.git"
+    "url": "git+https://github.com/JamesSingleton/one-app-page-wrapper.git"
   },
   "keywords": [],
   "author": "James Singleton <jamesrsingleton1@gmail.com> (https://github.com/JamesSingleton)",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/JamesSingleton/my-apartment-page-wrapper/issues"
+    "url": "https://github.com/JamesSingleton/one-app-page-wrapper/issues"
   },
-  "homepage": "https://github.com/JamesSingleton/my-apartment-page-wrapper#readme",
+  "homepage": "https://github.com/JamesSingleton/one-app-page-wrapper#readme",
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"

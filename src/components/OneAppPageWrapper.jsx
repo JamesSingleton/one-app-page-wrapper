@@ -5,7 +5,7 @@ import {
   shape, func, string, node,
 } from 'prop-types';
 
-const MyApartmentPageWrapper = ({
+const OneAppPageWrapper = ({
   loadStatus, Header, Footer, children,
 }) => {
   if (loadStatus.all === 'loading') {
@@ -21,7 +21,7 @@ const MyApartmentPageWrapper = ({
   );
 };
 
-MyApartmentPageWrapper.propTypes = {
+OneAppPageWrapper.propTypes = {
   loadStatus: shape({
     all: string,
   }).isRequired,
@@ -30,9 +30,13 @@ MyApartmentPageWrapper.propTypes = {
   children: node.isRequired,
 };
 
-const loadDataAsProps = ({ store: { dispatch } }) => ({
-  Header: () => dispatch(queryModule('my-apartment-header')),
-  Footer: () => dispatch(queryModule('my-apartment-footer')),
-});
+const loadDataAsProps = ({ store: { dispatch }, ownProps }) => {
+  const { header, footer } = ownProps.route;
 
-export default connectAsync({ loadDataAsProps })(MyApartmentPageWrapper);
+  return {
+    Header: () => dispatch(queryModule(header)),
+    Footer: () => dispatch(queryModule(footer)),
+  };
+};
+
+export default connectAsync({ loadDataAsProps })(OneAppPageWrapper);

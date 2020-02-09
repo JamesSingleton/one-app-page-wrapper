@@ -1,3 +1,3 @@
-import ModuleContainer from './components/MyApartmentPageWrapper';
+import ModuleContainer from './components/OneAppPageWrapper';
 
 export default ModuleContainer;
