@@ -30,6 +30,6 @@ jobs:
       env:
         NODE_ENV: production
     - name: 'Deploy'
-      run: now --prod -t $NOW_TOKEN
+      run: now --prod --confirm -t $NOW_TOKEN
       env:
         NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
