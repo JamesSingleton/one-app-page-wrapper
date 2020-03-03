@@ -17,7 +17,7 @@ import React from 'react';
 import ModuleRoute from 'holocron-module-route';
 
 const childRoutes = () => ([
-  <ModuleRoute moduleName="one-app-page-wrapper">
+  <ModuleRoute moduleName="one-app-page-wrapper" header="my-header-module" footer="my-footer-module">
     <ModuleRoute path="/" moduleName="my-cool-module" />
   </ModuleRoute>,
 ]);
