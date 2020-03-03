@@ -30,7 +30,7 @@ OneAppPageWrapper.propTypes = {
   children: node.isRequired,
 };
 
-const loadDataAsProps = ({ store: { dispatch }, ownProps }) => {
+export const loadDataAsProps = ({ store: { dispatch }, ownProps }) => {
   const { header, footer } = ownProps.route;
 
   return {
@@ -39,4 +39,5 @@ const loadDataAsProps = ({ store: { dispatch }, ownProps }) => {
   };
 };
 
+export const ComponentUnderTest = OneAppPageWrapper;
 export default connectAsync({ loadDataAsProps })(OneAppPageWrapper);

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OneAppPageWrapper should render the correct loaded state 1`] = `
+<div>
+  <Header />
+  <MockChild />
+  <Footer />
+</div>
+`;
+
+exports[`OneAppPageWrapper should render the correct loading 1`] = `
+<div>
+  Loading...
+</div>
+`;
