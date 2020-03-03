@@ -6,14 +6,14 @@ import {
 } from 'prop-types';
 
 const OneAppPageWrapper = ({
-  loadStatus, Header, Footer, children,
+  loadStatus, Header, Footer, children, route: { classname },
 }) => {
   if (loadStatus.all === 'loading') {
     return <div>Loading...</div>;
   }
 
   return (
-    <div>
+    <div className={classname}>
       <Header />
       {children}
       <Footer />
@@ -28,6 +28,15 @@ OneAppPageWrapper.propTypes = {
   Header: func.isRequired,
   Footer: func.isRequired,
   children: node.isRequired,
+  route: shape({
+    classname: string,
+  }),
+};
+
+OneAppPageWrapper.defaultProps = {
+  route: {
+    classname: '',
+  },
 };
 
 export const loadDataAsProps = ({ store: { dispatch }, ownProps }) => {
