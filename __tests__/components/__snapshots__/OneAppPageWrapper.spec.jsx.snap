@@ -1,7 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`OneAppPageWrapper should add classname 1`] = `
+<div
+  className="my-class-name"
+>
+  <Header />
+  <MockChild />
+  <Footer />
+</div>
+`;
+
 exports[`OneAppPageWrapper should render the correct loaded state 1`] = `
-<div>
+<div
+  className=""
+>
   <Header />
   <MockChild />
   <Footer />

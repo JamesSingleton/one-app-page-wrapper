@@ -43,6 +43,23 @@ describe('OneAppPageWrapper', () => {
     const renderedModule = shallow(<OneAppPageWrapper {...props} />);
     expect(renderedModule).toMatchSnapshot();
   });
+
+  it('should add classname', () => {
+    const props = {
+      loadStatus: {
+        all: 'complete',
+      },
+      Header,
+      Footer,
+      children: <MockChild />,
+      route: {
+        classname: 'my-class-name',
+      },
+    };
+    const renderedModule = shallow(<OneAppPageWrapper {...props} />);
+    expect(renderedModule.find('.my-class-name')).toHaveLength(1);
+    expect(renderedModule).toMatchSnapshot();
+  });
 });
 
 describe('loadDataAsProps', () => {
