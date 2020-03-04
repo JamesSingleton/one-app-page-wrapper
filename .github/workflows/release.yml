@@ -1,12 +1,12 @@
-name: Deploy
+name: Release
 
 on:
   push:
-    tags:
-    - '*'
+    branches:
+      - master
 
 jobs:
-  deploy:
+  release:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -29,7 +29,7 @@ jobs:
       run: npm run build
       env:
         NODE_ENV: production
-    - name: 'Deploy'
-      run: now build/*/ --prod --confirm -t $NOW_TOKEN
+    - name: Run Semantic Release
+      run: npx semantic-release
       env:
-        NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
