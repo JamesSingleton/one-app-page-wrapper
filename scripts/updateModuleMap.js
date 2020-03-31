@@ -28,7 +28,7 @@ const doWork = async () => {
       },
     };
 
-    console.log('New Module Map: ', JSON.parse(moduleMapContent));
+    console.log('New Module Map: ', JSON.stringify(moduleMapContent));
   } catch (error) {
     console.log(error);
   }
