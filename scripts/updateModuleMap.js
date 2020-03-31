@@ -1,5 +1,5 @@
 const fetch = require('node-fetch');
-const { name } = require('../package.json');
+const { name, version } = require('../package.json');
 
 const bundleIntegrity = require('../bundle.integrity.manifest.json');
 
@@ -15,18 +15,20 @@ const doWork = async () => {
 
     moduleMapContent.modules[name] = {
       browser: {
-        url: `${STATIC_ASSETS_URL}/${name}.browser.js`,
+        url: `${STATIC_ASSETS_URL}/${version}/${name}.browser.js`,
         integrity: bundleIntegrity.browser,
       },
       legacyBrowser: {
-        url: `${STATIC_ASSETS_URL}/${name}.legacy.browser.js`,
+        url: `${STATIC_ASSETS_URL}/${version}/${name}.legacy.browser.js`,
         integrity: bundleIntegrity.legacyBrowser,
       },
       node: {
-        url: `${STATIC_ASSETS_URL}/${name}.node.js`,
+        url: `${STATIC_ASSETS_URL}/${version}/${name}.node.js`,
         integrity: bundleIntegrity.node,
       },
     };
+
+    console.log('New Module Map: ', moduleMapContent);
   } catch (error) {
     console.log(error);
   }

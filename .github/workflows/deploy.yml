@@ -35,3 +35,7 @@ jobs:
       run: now build --prod --confirm -t $NOW_TOKEN
       env:
         NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
+    - name: 'Update Module Map'
+      run: |
+        node ../../scripts/updateModuleMap.js
+
