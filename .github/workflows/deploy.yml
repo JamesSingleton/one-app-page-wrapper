@@ -38,7 +38,7 @@ jobs:
     - name: 'Update Module Map'
       run: |
         node ./scripts/updateModuleMap.js
-        now temp --prod --confirm -t $NOW_TOKEN --name my-apartment-module-map
+        now tmp --prod --confirm -t $NOW_TOKEN --name my-apartment-module-map
       env:
         NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
 
