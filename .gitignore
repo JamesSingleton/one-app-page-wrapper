@@ -9,6 +9,7 @@ node_modules
 build
 .webpack-stats*
 bundle.integrity.manifest.json
+tmp
 
 # test
 test-results

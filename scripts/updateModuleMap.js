@@ -1,3 +1,4 @@
+const fs = require('fs-extra');
 const fetch = require('node-fetch');
 const { name, version } = require('../package.json');
 
@@ -12,6 +13,7 @@ const doWork = async () => {
     const response = await fetch(moduleMapUrl);
 
     const moduleMapContent = await response.json();
+    const dir = 'tmp';
 
     moduleMapContent.modules[name] = {
       browser: {
@@ -28,7 +30,10 @@ const doWork = async () => {
       },
     };
 
-    console.log('New Module Map: ', JSON.stringify(moduleMapContent));
+    await fs.ensureDir(dir);
+    await fs.writeFile(
+      './tmp/module-map.json', JSON.stringify(moduleMapContent, null, 2)
+    );
   } catch (error) {
     console.log(error);
   }
