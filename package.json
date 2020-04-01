@@ -1,6 +1,6 @@
 {
   "name": "one-app-page-wrapper",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A page wrapper module to wrap your routes and pass a header and footer into.",
   "main": "index.js",
   "scripts": {
