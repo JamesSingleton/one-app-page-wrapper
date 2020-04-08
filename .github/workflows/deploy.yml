@@ -27,19 +27,19 @@ jobs:
       run: npm install
       env:
         NODE_ENV: development
-    - name: Build One App Page Wrapper
+    - name: Build Module
       run: npm run build
       env:
         NODE_ENV: production
-    - name: 'Deploy'
+    - name: 'Deploy Module'
       run: now build --prod --confirm -t $NOW_TOKEN
       env:
         NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
     - name: 'Update Module Map'
+      working-directory: tmp
       run: |
         node ./scripts/updateModuleMap.js
         ls
-        cd tmp
         now tmp --prod --confirm -t $NOW_TOKEN --name my-apartment-module-map
       env:
         NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
