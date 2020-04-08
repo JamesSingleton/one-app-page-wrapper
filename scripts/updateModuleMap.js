@@ -30,9 +30,17 @@ const doWork = async () => {
       },
     };
 
+    const nowJson = {
+      name: 'my-apartment-module-map',
+      version: 2,
+    };
+
     await fs.ensureDir(dir);
     await fs.writeFile(
       './tmp/module-map.json', JSON.stringify(moduleMapContent, null, 2)
+    );
+    await fs.writeFile(
+      './tmp/now.json', JSON.stringify(nowJson, null, 2)
     );
   } catch (error) {
     console.log(error);
