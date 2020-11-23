@@ -50,7 +50,7 @@
     "jest": "^26.0.0",
     "react-dom": "^16.13.0",
     "rimraf": "^3.0.1",
-    "semantic-release": "^17.0.4"
+    "semantic-release": "^17.2.3"
   },
   "jest": {
     "preset": "amex-jest-preset-react"
