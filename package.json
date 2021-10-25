@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/JamesSingleton/one-app-page-wrapper#readme",
   "dependencies": {
-    "fs-extra": "^9.0.0",
+    "fs-extra": "^10.0.0",
     "iguazu": "^3.0.0",
     "iguazu-holocron": "^1.0.0",
     "node-fetch": "^2.6.0",
